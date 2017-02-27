@@ -1,0 +1,63 @@
+
+<html>
+<body>
+	<h2>Recursive Descent Recognizer</h2>
+	<font size="4"><b>By: Zuriel Smith</b></font>
+	
+	<br>
+	
+	<br><b>Grammar for Arithmatic Expression</b>
+	<br>EXP ::= EXP + TERM | EXP - TERM | TERM
+	<br>TERM ::= TERM * FACTOR | TERM / FACTOR | FACTOR
+	<br>FACTOR ::= (EXP) | DIGIT
+	<br>DIGIT ::= 0|1|2|3
+		
+	<br>
+	
+	<br>Examples of valid strings include:
+	<br>(1+2+3)/(2+1)$
+	<br>1-2*2$
+	<br>(1-2)*3$
+	<br>2/3$
+	<br>1+2$
+	<br>0-3*2$
+	<br>2/(3+1)$
+		
+	<br>
+		
+	<br>Examples of invalid strings include:
+	<br>22-3$
+	<br>2/$
+	<br>(1-4)*3$
+	<br>1+2
+	<br>1*4$
+	<br>1*a$
+		
+	<br>
+		
+	<br>Enter string using the numbers 0 to 3, and the
+	<br>symbols +, -, *, /, (, and ).
+	<br>Your end of string variable will be dollar sign ($).
+	<br>When you click on 'submit', it will check whether entered string is valid or not for a given grammar.
+		
+	<p></p>
+	
+    Input String: <input type="text" name="token" id="token">
+    <button onclick="setup(document.getElementById('token').value)">Submit</button>
+    
+    <p id="demo"></p>
+
+<script>
+var _0x1c7a=["\x6C\x65\x6E\x67\x74\x68","\x73\x75\x62\x73\x74\x72\x69\x6E\x67","\x24","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x64\x65\x6D\x6F","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x49\x6E\x70\x75\x74\x20\x73\x74\x72\x69\x6E\x67\x3A\x20","\x20\x68\x61\x73\x20\x65\x72\x72\x6F\x72\x73\x20\x66\x6F\x75\x6E\x64","\x28","\x29","\x2A","\x2F","\x2B","\x2D","\x73\x68\x69\x66\x74","\x20\x69\x73\x20\x76\x61\x6C\x69\x64"];function setup(_0x4426x2){var _0x4426x3=_0x4426x2[_0x1c7a[0]];var _0x4426x4= new Array(_0x4426x3);for(var _0x4426x5=0;_0x4426x5<_0x4426x3;_0x4426x5++){_0x4426x4[_0x4426x5]=_0x4426x2[_0x1c7a[1]](_0x4426x5,_0x4426x5+1)};if(_0x4426x4[_0x4426x3-1]!=_0x1c7a[2]){document[_0x1c7a[5]](_0x1c7a[4])[_0x1c7a[3]]=_0x1c7a[6]+_0x4426x2+_0x1c7a[7];return};begin(_0x4426x4,_0x4426x2)}function begin(_0x4426x4,_0x4426x2){if(_0x4426x4[0]==0||_0x4426x4[0]==1||_0x4426x4[0]==2||_0x4426x4[0]==3||_0x4426x4[0]==_0x1c7a[8]||_0x4426x4[0]==_0x1c7a[9]||_0x4426x4[0]==_0x1c7a[10]||_0x4426x4[0]==_0x1c7a[11]||_0x4426x4[0]==_0x1c7a[12]||_0x4426x4[0]==_0x1c7a[13]){EXP(_0x4426x4,_0x4426x2);return}else {document[_0x1c7a[5]](_0x1c7a[4])[_0x1c7a[3]]=_0x1c7a[6]+_0x4426x2+_0x1c7a[7]}}function EXP(_0x4426x4,_0x4426x2){if(_0x4426x4[0]==0||_0x4426x4[0]==1||_0x4426x4[0]==2||_0x4426x4[0]==3||_0x4426x4[0]==_0x1c7a[8]||_0x4426x4[0]==_0x1c7a[9]||_0x4426x4[0]==_0x1c7a[10]||_0x4426x4[0]==_0x1c7a[11]||_0x4426x4[0]==_0x1c7a[12]||_0x4426x4[0]==_0x1c7a[13]){TERM(_0x4426x4,_0x4426x2);while(_0x4426x4[0]==_0x1c7a[12]||_0x4426x4[0]==_0x1c7a[13]){_0x4426x4[_0x1c7a[14]]();TERM(_0x4426x4,_0x4426x2)};return}else {document[_0x1c7a[5]](_0x1c7a[4])[_0x1c7a[3]]=_0x1c7a[6]+_0x4426x2+_0x1c7a[7]}}function TERM(_0x4426x4,_0x4426x2){if(_0x4426x4[0]==0||_0x4426x4[0]==1||_0x4426x4[0]==2||_0x4426x4[0]==3||_0x4426x4[0]==_0x1c7a[8]||_0x4426x4[0]==_0x1c7a[9]||_0x4426x4[0]==_0x1c7a[10]||_0x4426x4[0]==_0x1c7a[11]||_0x4426x4[0]==_0x1c7a[12]||_0x4426x4[0]==_0x1c7a[13]){FACTOR(_0x4426x4,_0x4426x2);while(_0x4426x4[0]==_0x1c7a[10]||_0x4426x4[0]==_0x1c7a[11]){_0x4426x4[_0x1c7a[14]]();FACTOR(_0x4426x4,_0x4426x2)};return}else {document[_0x1c7a[5]](_0x1c7a[4])[_0x1c7a[3]]=_0x1c7a[6]+_0x4426x2+_0x1c7a[7]}}function FACTOR(_0x4426x4,_0x4426x2){if(_0x4426x4[0]==_0x1c7a[8]){_0x4426x4[_0x1c7a[14]]();EXP(_0x4426x4,_0x4426x2);if(_0x4426x4[0]==_0x1c7a[9]){_0x4426x4[_0x1c7a[14]]();if(_0x4426x4[0]==_0x1c7a[2]){document[_0x1c7a[5]](_0x1c7a[4])[_0x1c7a[3]]=_0x1c7a[6]+_0x4426x2+_0x1c7a[15]}else {return}};return}else {if(_0x4426x4[0]==0||_0x4426x4[0]==1||_0x4426x4[0]==2||_0x4426x4[0]==3){DIGIT(_0x4426x4,_0x4426x2);while(_0x4426x4[0]==0||_0x4426x4[0]==1||_0x4426x4[0]==2||_0x4426x4[0]==3){DIGIT(_0x4426x4,_0x4426x2)};if(_0x4426x4[0]==_0x1c7a[2]){document[_0x1c7a[5]](_0x1c7a[4])[_0x1c7a[3]]=_0x1c7a[6]+_0x4426x2+_0x1c7a[15]};return}else {document[_0x1c7a[5]](_0x1c7a[4])[_0x1c7a[3]]=_0x1c7a[6]+_0x4426x2+_0x1c7a[7]}}}function DIGIT(_0x4426x4,_0x4426x2){if(_0x4426x4[0]==0||_0x4426x4[0]==1||_0x4426x4[0]==2||_0x4426x4[0]==3){_0x4426x4[_0x1c7a[14]]();if(_0x4426x4[0]==0||_0x4426x4[0]==1||_0x4426x4[0]==2||_0x4426x4[0]==3){document[_0x1c7a[5]](_0x1c7a[4])[_0x1c7a[3]]=_0x1c7a[6]+_0x4426x2+_0x1c7a[7];var _0x4426x3=_0x4426x4[_0x1c7a[0]];for(var _0x4426x5=0;_0x4426x5<_0x4426x3;_0x4426x5++){_0x4426x4[_0x1c7a[14]]()}};if(_0x4426x4[0]==_0x1c7a[2]){document[_0x1c7a[5]](_0x1c7a[4])[_0x1c7a[3]]=_0x1c7a[6]+_0x4426x2+_0x1c7a[15]};return}else {document[_0x1c7a[5]](_0x1c7a[4])[_0x1c7a[3]]=_0x1c7a[6]+_0x4426x2+_0x1c7a[7];_0x4426x4[_0x1c7a[14]]()}}
+</script>
+
+	
+  
+	<b><A HREF="report.html">RDR REPORT</A></b>
+	
+	<p>
+		<A HREF="index.html">Zuriel's Main Page</A>
+	</p>
+		
+</body>
+</html>
